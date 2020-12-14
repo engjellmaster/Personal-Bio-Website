@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--flexibile box--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flexibile box</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rosario">
+<style type="text/css">
+	.flexbox{
+		width: 600px;
+		height: 420px;
+		display: -webkit-box;
+		display: box;
+		-webkit-box-orient:horizontal;
+		box-orient:horizontal;
+	}
+	.flexbox > div{
+		-webkit-transition: 1s ease-out;
+		transition: 1s ease-out;
+		-webkit-border-radius:10px;
+		border-radius: 10px;
+		border:2px solid black;
+		width: 120px;
+		margin: 10px -10px 10px 0px;
+		padding: 20px 20px 20px 20px;
+		box-shadow: 10px 10px 10px 10px dimgrey;
+	}
+	.flexbox >div:nth-child(1){background-color: lightgrey;}
+	.flexbox >div:nth-child(2){background-color: lightgrey;}
+	.flexbox >div:nth-child(3){background-color: lightgrey;}
+	.flexbox >div:nth-child(4){background-color: lightgrey;}
+	.flexbox > div:hover {
+		width: 200px; color: white; font-weight: bold;
+	}
+	.flexbox > div:nth-child(1):hover {background-color: royalblue;}
+	.flexbox > div:nth-child(2):hover {background-color: crimson;}
+	.flexbox > div:nth-child(3):hover {background-color: crimson;}
+	.flexbox > div:nth-child(4):hover {background-color: darkgreen;}
+	p{height: 250px; overflow: hidden;font-family: "Rosario"}
+</style>
+</head>
+<body>
+	<div class="flexbox">
+		<div><img src="photos/oip.jpg" width="50" height="50">
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+			<div><img src="photos/logo.png" width="50" height="50"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+		<div><img src="photos/icon.jpg" width="50" height="50"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+		<div><img src="photos/twitter.png" width="50" height="50"><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p></div>
+	</div>
+</body>
+</html>

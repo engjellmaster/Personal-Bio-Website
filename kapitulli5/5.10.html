@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!---imageborder--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>image borders</title>
+<style type="text/css">
+	div{
+		border-width: 30px;
+		width: 100px;
+		padding: 20px 20px;
+	}
+	#stretch
+	{
+		-webkit-border-image:  url(photos/oip.jpg) 40 40 40 40 stretch;
+		-moz-border-image:  url(photos/oip.jpg) 40 40 40 40  stretch;
+		-o-border-image:  url(photos/oip.jpg) 40 40 40 40  stretch;
+		border-image:  url(photos/oip.jpg) 40 40 40 40  stretch;
+	}
+	#repeat
+	 {
+		-webkit-border-image:url(photos/oip.jpg) 20% 20% repeat;
+		-moz-border-image:url(photos/oip.jpg) 20% 20% repeat;
+		-o-border-image:url(photos/oip.jpg) 20% 20%repeat;
+		border-image:url(photos/oip.jpg) 20% 20%repeat;
+	}
+</style>
+</head>
+<body>
+	<h2>Image borders</h2>
+	<img src="photos/oip.jpg" alt="instagram logo">
+	<p><div id="stretch">Stretching the image borders</div></p>
+	<p><div id="" ="repeat">repeating the image borders</div></p>
+
+</body>
+</html>

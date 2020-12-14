@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!---media queries--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Queries</title>
+	<style type="text/css">
+		p{
+			margin: 0.9em 0em;
+		}
+		/*/styles for smartphones with screen widths 480px or smaller*/
+		@media handheld and (max-width: 480px),
+		screen and (max-device-width:480px),
+		screen and (max-width: 480px)
+		{
+			div{ -webkit-column-count:1;
+			column-count: 1; }
+
+		}
+		/*styles for screen widths +481px*/
+		@media only screen and (min-width: 481px) and (max-width: 1024px)
+		{
+			div{
+				-webkit-column-count:2;
+				column-count: 2;
+				-webkit-column-gap: 30px;
+				column-gap: 30px;
+				-webkit-column-rule: 1px outset black;
+				column-rule: 1px outset black;
+			}
+		}
+		/*styles for devices with screens +1025px*/
+		@media only screen and (min-width: 1025px)
+		{
+			div{
+				-webkit-column-count:3;
+				column-count: 3
+				-webkit-column-gap:30px;
+				column-gap: 30px;
+				-webkit-column-rule:1px outset black;
+				column-rule: 1px outset black;
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<header><h1>Computers, Hardware and Software</h1></header>
+	<div><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+		<footer><em>&copy; 2012 by Pearson Education,Inc. All rights reserved</em></footer></div>
+
+</body>
+</html>

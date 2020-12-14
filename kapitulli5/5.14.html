@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!---melting images-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>melting</title>
+	<style type="text/css">
+	#cover
+	{
+		position: relative;
+		margin: 0 auto;
+	}
+	#cover img
+	{
+		position: absolute;
+		left: 0;
+		-webkit-transition: opacity 4s ease-in-out;
+		transition: opacity 4s ease-in-out;
+	}
+	#cover img.top:hover
+	{ opacity: 0; }
+
+	</style>
+</head>
+<body>
+<div id ="cover">
+	<img class="bottom" src="photos/oip.jpg" alt="oip melt">
+	<img class="top" src="photos/final.png" alt="ig melt">
+</div>
+</body>
+</html>

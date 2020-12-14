@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!---fig 4.10 - relative positioning--->
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Relative positioning</title>
+	<style type="text/css">
+		p  {font-size: 1.3em;
+			font-family: verdana, arial, sans-serif}
+	span 	 { color: red;
+			font-size: .6em;
+			height: 1em; }
+	.super  { position: relative;
+			bottom: -1em; }
+	.sub    {position: relative;
+		bottom: -1ex;}
+	.shiftleft {position: relative;
+		left: -1ex;}
+	.shiftright {position: relative;
+		right: -1ex;}
+	</style>
+</head>
+<body>
+	<p>Teksti ne fund te ketij vargu
+		<span class="super">eshte ne superscript</span></p>
+<p>Teksti ne fund te ketij vargu
+		<span class="sub">eshte ne superscript</span></p>
+<p>Teksti ne fund te ketij vargu
+		<span class="shiftright">eshte ne superscript</span></p>
+<p>Teksti ne fund te ketij vargu
+		<span class="shiftleft">eshte ne superscript</span></p>
+
+
+</body>
+</html>

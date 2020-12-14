@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!---animations--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>animations</title>
+	<style type="text/css">
+		img{
+			position: relative;
+			-webkikt-animation:movingImage linear 5s 1s 2s alternate;
+			-moz-animation:movingImage linear 5s 1s 2s alternate;
+			animation: movingImage linear 5s 2 1s alternate;
+		}
+		@-webkit-keyframes movingImage
+		{
+			0% {opacity: 0; left: 50px; top: 0px;}
+			25% {opacity: 1; left: 0px; top: 5 0px;}
+			50% {opacity: 0; left: 50px; top: 100px;}
+			75% {opacity: 0; ;left: 100px; top: 50px;}
+			100% {opacity: 0; left: 50px; top: 0px;}
+		}
+		@-moz-keyframes movingImage{
+			0% {opacity: 0; left: 50px; top: 0px;}
+			25% {opacity: 1; left: 0px; top: 5 0px;}
+			50% {opacity: 0; left: 50px; top: 100px;}
+			75% {opacity: 0; ;left: 100px; top: 50px;}
+			100% {opacity: 0; left: 50px; top: 0px;}
+		}
+		@keyframes movingImage{
+			0% {opacity: 0; left: 50px; top: 0px;}
+			25% {opacity: 1; left: 0px; top: 5 0px;}
+			50% {opacity: 0; left: 50px; top: 100px;}
+			75% {opacity: 0; ;left: 100px; top: 50px;}
+			100% {opacity: 0; left: 50px; top: 0px;}
+		}
+	</style>
+</head>
+<body>
+	<img src="photos/oip.jpg" width="138" height="180" alt="opt logo">
+	<div></div>
+
+</body>
+</html>
