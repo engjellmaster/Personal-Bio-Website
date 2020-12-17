@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- examination results counter--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<button ><a href="C:\projects\Personal-Bio-Website/assignments.html" >Go back <--</a></button><br><br>
+	<script type="text/javascript">
+		//initializing variables in declarations 
+		var passes = 0; // number of passes 
+		var failures = 0; // number of failures
+		var student = 1; // student counter
+		var result; // an exam result 
+		 // proceses 10 students; counter controlled loop
+		 while ( student <=10)
+		 {
+		 	result = window.prompt("enter result (1=pass,2=fail)", "1");
+
+		 	if ( result=="1")
+		 		passes = passes + 1;
+		 	else
+		 		failures = failures +1;
+		 		student = student +1;
+		 } // end while
+			// termination phase
+			document.writeln("<h1>Examination result</h1>");
+			document.writeln("<p>Passed: " + passes + ":Failed:" + failures + "</p>");
+
+			if (passes > 8)
+				document.writeln("<p>Bonus to Instructor!</p>");
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
