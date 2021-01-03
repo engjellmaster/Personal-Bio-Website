@@ -1,6 +1,5 @@
 @charset "utf-8" ;
 <!---css style --->
-
 body {background-color:#f6f5f5;
 	margin: 0px;
 	padding: 0px;
@@ -29,7 +28,8 @@ nav{
 	height: 60px;
 	background-color: white;
 	box-shadow: 7px 7px 12px rgba(0,0,0,0.3);
-	padding-top: 5px;}
+	padding-top: 5px;
+}
 nav ul{
 	display: flex;
 }
@@ -52,71 +52,87 @@ nav ul li a:hover{
 	padding-left: 20px;
 	padding-bottom: 10px;
     padding-top: 0px;
+
+
+
+}
+.active{
+	font-weight: bold;
+	color: #2d2a2a;
+
 }
 footer{
 	background: #303036;
 	color: #d3d3d3;
 	height: 70px;
 	width: 100%;
-	
+	position: absolute;
 	text-align: center;
 	padding-top: 5px;
-	box-shadow: 0px -10px 8px dimgrey;
-}
+	box-shadow: 0px -10px 8px dimgrey;}
 
-
-
-nav{ 
-position: relative; }
-
-.video {
-display: flex;
-justify-content: center;
-align-items: center;
-
-  /* apply negative top and left margins to truly center the element */
-}
-@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 	*
 	{	
 	
 	 font-family: 'Langar', cursive;}
-h1{
-	background-color: #F0F8FF;
-	width: 98%;
-	padding: 10px;
+section{
+	background: #F0F8FF;
+	width: 100%;
+
+
+	
+}
+section .container{
+	align-items: center;
 	justify-content: center;
-	align-items:center;
-	text-align: center;
+	display: block;
+padding-left: 370px;
+padding-top: 
+	
+
+}
+
+section .container .contactinfo .sci{
 	position: relative;
 	display: flex;
-	top: 15px;
-		border : 2px solid black;
+}
+section .container .info{
+	border: solid	#d4a713;
+	
 	border-radius: 15px;
-	margin-right: 4px;
-
-
+	box-shadow: 4px 10px 20px;
+	
+	width: 55%;
+	display: flex;
+	justify-content: space-between;
 
 }
 
-.text {
-	width: 48%;
-background-color: #F0F8FF;
-	border : 2px solid black;
+section .container .sci{
+	border: solid 	#d4a713;
 	border-radius: 15px;
-	box-shadow: 7px 10px 5px dimgrey;
-	left: 290px;
-	position: absolute;
-	padding: 3px; 
+	box-shadow: 4px 10px 20px;
+	margin: 1;
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+
+}
+section .contactform {
+		border: solid 	#d4a713;
+		border-radius: 15px;
+		box-shadow: 4px 10px 20px;
+	margin:5;
+	width: 36%;
+	display: block;
+	justify-content: space-between;
+padding-left: 30px;
 }
 
-.video1{
-	padding: 2px;
-	border: 1px solid black;
+input[type="text"]
+{
+    background-color: #fff;
+    color: #000;
+    width: 50%;
 }
-
-.video2{
-	padding: 2px;
-	border: 1px solid black;
-}
-
