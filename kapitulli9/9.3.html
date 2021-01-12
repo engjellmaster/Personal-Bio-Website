@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!---programmer defined maximum function--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MAXIMUM OF THREE VALUES</title>
+	<button ><a href="../assignments.html" >Go back <--</a></button><br><br>
+	<style type="text/css">
+		p {margin: 0;}
+	</style>
+	<script type="text/javascript">
+		var input1 = window.prompt("enter first number" , "0");
+		var input2 = window.prompt("enter second number" , "0");
+		var input3 = window.prompt("enter third number" , "0");
+
+		var value1 = parseFloat ( input1);
+		var value2 = parseFloat (input2);
+		var value3 = parseFloat (input3);
+
+		var maxValue = maximum(value1, value3,value3);
+
+		document.writeln("<p>First number : "+ value1 + "</p>" + "<p>second number: " + value2 + "</p>" + "<p> third number:" +value3 +" </p>" + "<p> maximum is : " + maxValue + "</p>");
+		function maximum (x, y, z){
+			return Math.max(x, Math.max(y, z));
+		}
+
+
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

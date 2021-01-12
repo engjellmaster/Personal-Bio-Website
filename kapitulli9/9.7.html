@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--craps game simulation--->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>craps game simulation</title>
+	<button ><a href="../assignments.html" >Go back <--</a></button><br><br>
+	<style type="text/css">
+		p.red { color: red }
+		img { width: 54px; height: 54px; }
+		div {border: 5px ridge royalblue;
+			padding: 10px; width: 120px;
+			margin-bottom: 10px;}
+		.point {margin: 0px;}
+	</style>
+	<script type="text/javascript">
+		var pointDie1Img; // refers to first die point img
+		var pointDie2Img; // refers to secont die point img
+		var rollDie1Img; // refers to first die roll img
+		var rollDie2Img;
+		var messages; // refers to messages paragraph
+		var playButton;	// refers to playbutton
+		var rollButton; // refers to rollbutton
+		var dicerolling; // refers to audio clip for dice
+
+		// other variables
+		var myPoint; // point if no win loss on first roll
+		var die1Value;
+		var die2Value;
+
+		// starts a new game
+		function startGame()
+		{
+			dicerolling = document.getElementById("dicerolling");
+			pointDie1Img = document.getElementById ("pointDie1");
+			pointDie2Img = document.getElementById("pointDie2");
+			rollDie1Img = document.getElementById("rollDie1");
+			rollDie2Img = document.getElementById("rollDie2");
+			messages = document.getElementById("messages");
+			playButton = document.getElementById("play");
+			rollButton = document.getElementById("roll");
+
+			//prepare the GUI
+			rollButton.disabled = true; // disabled rollButton
+			setImage(pointDie1Img); // reset image for new game
+			setImage(pointDie2Img); 
+			setImage(rollDie1Img);	
+			setImage(rollDie2Img);
+
+			myPoint = 0;
+			firstRoll(); 
+
+		}
+		function firstRoll()
+		{
+			var sumOfDice = rollDice(); // first roll of the dice 
+			// determine if the user won, lost or must continue rolling
+			switch (sumOfDice)
+			{
+				case 7: case 11: // win on  first roll
+				messages.innerHTML = "You win!!! click play to play again.";
+				break;
+				case 2: case 3: case 12: // lose on first roll
+				messages.innerHTML = "Sorry you lose. Clock play to play again";
+				break;
+			default: // remember point
+			myPoint = sumOfDice;
+			setImage(pointDie1Img , die1Value);
+			setImage(pointDie2Img, die2Value);
+			messages.innerHTML = "Roll Again!";
+			rollButton.disabled = false; // enable rollButton
+			playButton.disabled = true; // disable playButton
+			break;
+			}
+		}
+		function rollAgain()
+		{
+			var sumOfDice = rollDice();
+			if (sumOfDice == myPoint)
+			{
+				messages.innerHTML = 
+				"you win!!! click play to play again.";
+				rollButton.disabled = true; // disable rollButton
+				playbutton.disabled = false; // enable playButton
+			}
+			else if (sumOfDice ==7) // craps
+{
+	messages.innerHTML = "sorry you lose . click play to play again";
+	rollButton.disabled = true; // dissable roll button
+	playbutton.disabled = false; // enable PlayButton
+}
+		}
+
+		//roll the dice
+		function rollDice()
+		{
+			dicerolling.play(); // play dice rolling sound
+			//clear old die images while rolling sound plays 
+			die1Value = NaN;
+			die2Value = NaN;
+			showDice();
+			die1Value = Math.floor(1 + Math.random() * 6);
+			die2Value = Math.floor(1 + Math.random() * 6);
+			return die1Value + die2Value ;
+		}
+			function showDice()
+			{
+				setImage(rollDie1Img, die1Value);
+				setImage(rollDie2Img, die2Value);
+			}
+			function setImage(dieImg, dieValue)
+			{
+				if ( isFinite( dieValue ) )
+					dieImg.src = "die" + dieValue + ".png";
+				else
+					dieImg.src = "die3.png";
+			}
+			function start()
+			{
+				var playButton = document.getElementById( "play" );
+				playButton.addEventListener( "click", startGame, false);
+				var rollButton = document.getElementById("roll");
+				rollButton.addEventListener("click", rollAgain, false);
+				var diceSound = document.getElementById("dicerolling");
+				diceSound.addEventListener("ended", showDice, false);
+			}
+			window.addEventListener("load", start, false);
+			</script>
+	</head>
+<body>
+	<audio id="dicerolling" preload="auto">
+		<source src="winsound.mp3" type="audio/mpeg">
+			<source src="winsound.ogg" type="audio/ogg">
+			Browser does not support audio tag </audio>
+	<p><a href="#">Click here for a short video explaining the basic craps rules</a></p>
+	<div id="pointDiv">
+		<p class="point">Point is:</p>
+		<img id = "pointDie1" src="die1.png" alt="die 1 of point value">
+		<img id = "pointDie2" src = "die2.png" alt = "die 2 of point value">
+	</div>
+	<div class = "rollDiv">
+		<img id = "rollDie1" src = "die1.png"
+		alt="die 1 of roll value">
+		<img id = " rollDie2" src = "die2.png"
+		alt = " die 2 of roll value">
+
+	</div>
+	<form action = "#">
+		<input id = "play" type = "button" value="play">
+		<input id = "roll" type="button" value="roll">
+	</form>
+	<p id = "messages" class = "red">click play to start the game</p>
+</body>
+</html>

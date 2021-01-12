@@ -1,5 +1,5 @@
 @charset "utf-8" ;
-<!---css style --->
+
 body {background-color:#f6f5f5;
 	margin: 0px;
 	padding: 0px;
@@ -195,3 +195,86 @@ footer{
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+@media only screen and (max-width: 1200px){
+	
+	.modeli{
+	position: absolute;
+	bottom: 400px;
+	left: 60%;
+	transform: translateX(-70%);}
+	
+	.modeli2{
+	height: 300px;
+	position: absolute;
+	bottom: 380px;
+	left: 60%;
+	transform: translateX(-70%);}
+	
+	.text-container{
+	position: absolute;
+	left: 40%;
+	top: 70%;
+	transform: translate(-13% , -42%);}
+}
+@media only screen and (max-width: 600px){
+		.text-container{
+	position: absolute;
+	left: 10%;
+	top: 70%;
+	transform: translate(-13% , -42%);}
+	
+	.text-container p:nth-child(1){
+	font-family: Times New Roman;
+	font-weight: bold;
+	color: #6d6d6d;
+	font-size: 15px;
+}
+.text-container p:nth-child(2){
+	font-family: Georgia;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #1a1a1a;
+	font-size: 30px;
+}
+.text-container p:nth-child(3){
+	font-family: Georgia;
+	color: #403e3e;
+	font-size: 30px;
+	line-height: 25px;}
+
+		nav ul li a{
+	margin: 10px;
+
+	font-size: 10px;
+	font-weight: 600;
+}
+.data{
+	position: absolute;
+	left: 80%;
+}
+
+
+
+
+}
+@media only screen and (max-width: 950px){
+	.text-container{
+	position: absolute;
+	left: 20%;
+	top: 70%;
+	transform: translate(-13% , -42%);}
+	.text-container p:nth-child(2){
+	font-size: 30px;}
+
+}
+@media only screen and (max-width: 750px){
+	nav ul li a{
+	margin: 10px;
+
+	font-size: 12px;
+	font-weight: 200;}
+}
+
+
+
